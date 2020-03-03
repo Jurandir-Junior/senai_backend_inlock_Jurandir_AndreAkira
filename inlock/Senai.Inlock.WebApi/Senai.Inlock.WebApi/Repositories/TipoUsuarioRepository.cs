@@ -11,8 +11,8 @@ namespace Senai.Inlock.WebApi.Repositories
     public class TipoUsuarioRepository : ITipoUsuarioRepository
     {
 
-        //private string stringConexao = "Data Source=localhost\\SQLEXPRESS; initial catalog=InLock_Games_Manha; integrated security=true;";
-        public string stringConexao = "Data Source=DEV701\\SQLEXPRESS; initial catalog=InLock_Games_Manha; user Id=sa; pwd=sa@132";
+        private string stringConexao = "Data Source=localhost\\SQLEXPRESS; initial catalog=InLock_Games_Manha; integrated security=true;";
+        //public string stringConexao = "Data Source=DEV701\\SQLEXPRESS; initial catalog=InLock_Games_Manha; user Id=sa; pwd=sa@132";
 
         public void Atualizar(int id, TipoUsuarioDomain tipoUsuarioAtualizado)
         {

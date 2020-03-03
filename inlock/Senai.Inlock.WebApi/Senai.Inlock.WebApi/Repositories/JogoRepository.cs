@@ -10,8 +10,8 @@ namespace Senai.Inlock.WebApi.Repositories
 {
     public class JogoRepository : IJogoRepository
     {
-        //private string stringConexao = "Data Source=localhost\\SQLEXPRESS; initial catalog=InLock_Games_Manha; integrated security=true;";
-        public string stringConexao = "Data Source=DEV701\\SQLEXPRESS; initial catalog=InLock_Games_Manha; user Id=sa; pwd=sa@132";
+        private string stringConexao = "Data Source=localhost\\SQLEXPRESS; initial catalog=InLock_Games_Manha; integrated security=true;";
+        //public string stringConexao = "Data Source=DEV701\\SQLEXPRESS; initial catalog=InLock_Games_Manha; user Id=sa; pwd=sa@132";
 
         public void Atualizar(int id, JogoDomain jogoAtualizado)
         {
@@ -19,7 +19,7 @@ namespace Senai.Inlock.WebApi.Repositories
             {
                 string queryUpdate = "UPDATE Jogos" +
                                      " SET NomeJogo = @NJ, Descricao = @D, Datalancamento = @DL, Valor = @V, IdEstudio = @IdE" +
-                                     " WHERE IdJogo = @ID";
+                                     " WHERE IdJogos = @ID";
 
                 using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
                 {
@@ -41,7 +41,7 @@ namespace Senai.Inlock.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectById = "SELECT IdJogos, NomeJogo, Descricao, DataLancamento, Valor, IdEstudio FROM Jogos WHERE IdJogo = @ID";
+                string querySelectById = "SELECT IdJogos, NomeJogo, Descricao, DataLancamento, Valor, Jogos.IdEstudio, NomeEstudio FROM Jogos INNER JOIN Estudios ON Estudios.IdEstudio = Jogos.IdEstudio WHERE IdJogos = @ID ";
 
                 con.Open();
 
@@ -110,7 +110,7 @@ namespace Senai.Inlock.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryDelete = "DELETE FROM Jogos WHERE IdJogo = @ID";
+                string queryDelete = "DELETE FROM Jogos WHERE IdJogos = @ID";
 
                 using (SqlCommand cmd = new SqlCommand(queryDelete, con))
                 {
@@ -129,7 +129,7 @@ namespace Senai.Inlock.WebApi.Repositories
 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectAll = "SELECT IdJogos, NomeJogo, Descricao, Datalancamento, Valor, Jogos.IdEstudio, NomeEstudio FROM Jogos " +
+                string querySelectAll = "SELECT IdJogos, NomeJogo, Descricao, DataLancamento, Valor, Jogos.IdEstudio, NomeEstudio FROM Jogos " +
                     " INNER JOIN Estudios ON Estudios.IdEstudio = Jogos.IdEstudio";
 
                 con.Open();

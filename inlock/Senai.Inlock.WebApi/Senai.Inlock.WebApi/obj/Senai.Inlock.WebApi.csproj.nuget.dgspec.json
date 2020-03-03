@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jurandir\\Desktop\\senai_backend_inlock_Jurandir_AndreAkira\\inlock\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi.csproj": {}
+    "C:\\Users\\Jurandir\\Desktop\\Inlock_Change\\inlock\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jurandir\\Desktop\\senai_backend_inlock_Jurandir_AndreAkira\\inlock\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi.csproj": {
+    "C:\\Users\\Jurandir\\Desktop\\Inlock_Change\\inlock\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jurandir\\Desktop\\senai_backend_inlock_Jurandir_AndreAkira\\inlock\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi.csproj",
+        "projectUniqueName": "C:\\Users\\Jurandir\\Desktop\\Inlock_Change\\inlock\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi.csproj",
         "projectName": "Senai.Inlock.WebApi",
-        "projectPath": "C:\\Users\\Jurandir\\Desktop\\senai_backend_inlock_Jurandir_AndreAkira\\inlock\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi.csproj",
+        "projectPath": "C:\\Users\\Jurandir\\Desktop\\Inlock_Change\\inlock\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi.csproj",
         "packagesPath": "C:\\Users\\Jurandir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jurandir\\Desktop\\senai_backend_inlock_Jurandir_AndreAkira\\inlock\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi\\obj\\",
+        "outputPath": "C:\\Users\\Jurandir\\Desktop\\Inlock_Change\\inlock\\Senai.Inlock.WebApi\\Senai.Inlock.WebApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jurandir\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -70,6 +70,10 @@
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[2.1.10, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
             },
             "Swashbuckle.AspNetCore.Swagger": {
               "target": "Package",

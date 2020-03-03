@@ -10,7 +10,47 @@ namespace Senai.Inlock.WebApi.Repositories
 {
     public class UsuarioRepository : IUsuarioRepository
     {
-        public string stringConexao = "Data Source=DEV701\\SQLEXPRESS; initial catalog=InLock_Games_Manha; user Id=sa; pwd=sa@132";
+        private string stringConexao = "Data Source=localhost\\SQLEXPRESS; initial catalog=InLock_Games_Manha; integrated security=true;";
+        //public string stringConexao = "Data Source=DEV701\\SQLEXPRESS; initial catalog=InLock_Games_Manha; user Id=sa; pwd=sa@132";
+
+        public UsuarioDomain BuscarPorEmailSenha(string email, string senha)
+        {
+            using (SqlConnection con = new SqlConnection(stringConexao))
+            {
+                string querySelect = "SELECT U.IdUsuario, U.Email, U.IdTipoUsuario, TU.Titulo FROM Usuario U INNER JOIN TipoUsuario TU ON U.IdTipoUsuario = TU.IdTipoUsuario WHERE Email = @Email AND Senha = @Senha";
+
+                using (SqlCommand cmd = new SqlCommand(querySelect, con))
+                {
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Senha", senha);
+
+                    con.Open();
+
+                    SqlDataReader rdr = cmd.ExecuteReader();
+
+                    if (rdr.Read())
+                    {
+                        UsuarioDomain usuario = new UsuarioDomain
+                        {
+                            IdUsuario = Convert.ToInt32(rdr["IdUsuario"]),
+
+                            Email = rdr["Email"].ToString(),
+
+                            IdTipoUsuario = Convert.ToInt32(rdr["IdTipoUsuario"]),
+
+                            TipoUsuario = new TipoUsuarioDomain
+                            {
+                                IdTipoUsuario = Convert.ToInt32(rdr["IdTipoUsuario"]),
+
+                                Titulo = rdr["Titulo"].ToString()
+                            }
+                        };
+                        return usuario;
+                    }
+                }
+                return null;    
+            }
+        }
 
         public void Atualizar(int id, UsuarioDomain usuarioAtualizado)
         {
@@ -36,7 +76,7 @@ namespace Senai.Inlock.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectById = "SELECT IdUsuario, Email, Senha, Usuario.IdTipoUsuario FROM Usuario" +
+                string querySelectById = "SELECT IdUsuario, Email, Senha, Usuario.IdTipoUsuario, Titulo FROM Usuario" +
                     " INNER JOIN TipoUsuario ON TipoUsuario.IdTipoUsuario = Usuario.IdTipoUsuario" +
                     " WHERE IdUsuario = @ID";
 

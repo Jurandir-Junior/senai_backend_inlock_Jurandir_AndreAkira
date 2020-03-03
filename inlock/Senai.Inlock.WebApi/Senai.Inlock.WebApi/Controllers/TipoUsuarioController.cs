@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.Inlock.WebApi.Domains;
@@ -13,6 +14,7 @@ namespace Senai.Inlock.WebApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class TipoUsuarioController : ControllerBase
     {
         private ITipoUsuarioRepository _tipoUsuarioRepository { get; set; }
@@ -22,12 +24,14 @@ namespace Senai.Inlock.WebApi.Controllers
             _tipoUsuarioRepository = new TipoUsuarioRepository();
         }
 
+        [Authorize(Roles = "1")]
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_tipoUsuarioRepository.Listar());
         }
 
+        [Authorize(Roles = "1")]
         [HttpGet("{id}")]
         public IActionResult GetById(int id)
         {
@@ -45,6 +49,7 @@ namespace Senai.Inlock.WebApi.Controllers
             return NotFound("Nenhum tipo de usuário encontrado para o identificador informado");
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(TipoUsuarioDomain novoTipoUsuario)
         {
@@ -57,6 +62,7 @@ namespace Senai.Inlock.WebApi.Controllers
             return Created("http://localhost:5000/api/TipoUsuario", novoTipoUsuario);
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, TipoUsuarioDomain tipoUsuarioAtualizado)
         {
@@ -86,6 +92,7 @@ namespace Senai.Inlock.WebApi.Controllers
                 );
         }
 
+        [Authorize(Roles = "1")]
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {

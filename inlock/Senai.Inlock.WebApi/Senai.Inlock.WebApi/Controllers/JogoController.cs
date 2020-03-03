@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Senai.Inlock.WebApi.Domains;
@@ -13,6 +14,7 @@ namespace Senai.Inlock.WebApi.Controllers
     [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class JogoController : ControllerBase
     {
         private IJogoRepository _jogoRepository { get; set; }
@@ -21,13 +23,14 @@ namespace Senai.Inlock.WebApi.Controllers
         {
             _jogoRepository = new JogoRepository();
         }
-
+        
         [HttpGet]
         public IActionResult Get()
         {
             return Ok(_jogoRepository.Listar());
         }
 
+        [Authorize(Roles = "1")]
         [HttpPost]
         public IActionResult Post(JogoDomain novoJogo)
         {
@@ -53,6 +56,7 @@ namespace Senai.Inlock.WebApi.Controllers
             return NotFound("Nenhum funcionário encontrado");
         }
 
+        [Authorize(Roles = "1")]
         [HttpPut("{id}")]
         public IActionResult Put(int id, JogoDomain jogoAtualizado)
         {
