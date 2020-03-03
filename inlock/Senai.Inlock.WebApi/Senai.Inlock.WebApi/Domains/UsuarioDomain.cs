@@ -16,6 +16,10 @@ namespace Senai.Inlock.WebApi.Domains
 
         [Required(ErrorMessage = "A senha é obrigatória")]
         [DataType(DataType.Password)]
-        public int Senha { get; set; }
+        public string Senha { get; set; }
+        
+        public int IdTipoUsuario { get; set; }
+
+        public TipoUsuarioDomain TipoUsuario { get; set; }
     }
 }

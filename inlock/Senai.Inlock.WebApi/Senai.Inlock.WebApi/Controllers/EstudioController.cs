@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -25,7 +26,7 @@ namespace Senai.Inlock.WebApi.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok(_estudioRepository.Listar());
+            return Ok(_estudioRepository.Listar()); 
         }
 
         [HttpPost]
@@ -33,7 +34,7 @@ namespace Senai.Inlock.WebApi.Controllers
         {
             _estudioRepository.Cadastrar(novoEstudio);
 
-            return Created("http://localhost:5000/api/Estudios", novoEstudio);
+            return Created("http://localhost:5000/api/Estudio", novoEstudio);
         }
 
         [HttpGet("{id}")]

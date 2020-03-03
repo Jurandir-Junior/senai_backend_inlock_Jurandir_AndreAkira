@@ -8,7 +8,7 @@ namespace Senai.Inlock.WebApi.Domains
 {
     public class JogoDomain
     {
-        public int IdJogo { get; set; }
+        public int IdJogos { get; set; }
 
         [Required(ErrorMessage = "O nome do jogo é obrigatório")]
         public string NomeJogo { get; set; }
@@ -23,6 +23,6 @@ namespace Senai.Inlock.WebApi.Domains
 
         public int IdEstudio { get; set; }
 
-        EstudioDomain Estudio { get; set; }
+        public EstudioDomain Estudio { get; set; }
     }
 }

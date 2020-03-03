@@ -35,12 +35,7 @@ namespace Senai.Inlock.WebApi
             {
                 app.UseDeveloperExceptionPage();
             }
-            else
-            {
-                app.UseHsts();
-            }
-
-            app.UseHttpsRedirection();
+            
             app.UseMvc();
         }
     }

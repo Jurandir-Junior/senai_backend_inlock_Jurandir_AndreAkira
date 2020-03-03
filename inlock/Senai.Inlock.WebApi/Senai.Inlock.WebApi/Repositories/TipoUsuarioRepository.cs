@@ -8,21 +8,22 @@ using System.Threading.Tasks;
 
 namespace Senai.Inlock.WebApi.Repositories
 {
-    public class EstudioRepository : IEstudioRepository
+    public class TipoUsuarioRepository : ITipoUsuarioRepository
     {
-        //private string stringConexao = "Data Source=localhost\\SQLEXPRESS; initial catalog=InLock_Games_Manha; integrated security=true;";
-        public string stringConexao = "Data Source=DEV701\\SQLEXPRESS; initial catalog=InLock_Games_Manha; user Id=sa; pwd=sa@132;";
 
-        public void Atualizar(int id, EstudioDomain estudioAtualizado)
+        //private string stringConexao = "Data Source=localhost\\SQLEXPRESS; initial catalog=InLock_Games_Manha; integrated security=true;";
+        public string stringConexao = "Data Source=DEV701\\SQLEXPRESS; initial catalog=InLock_Games_Manha; user Id=sa; pwd=sa@132";
+
+        public void Atualizar(int id, TipoUsuarioDomain tipoUsuarioAtualizado)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryUpdate = "UPDATE Estudios SET NomeEstudio = @NomeEstudio WHERE IdEstudio = @ID";
+                string queryUpdate = "UPDATE TipoUsuario SET Titulo = @Titulo WHERE IdTipoUsuario = @ID";
 
                 using (SqlCommand cmd = new SqlCommand(queryUpdate, con))
                 {
                     cmd.Parameters.AddWithValue("@ID", id);
-                    cmd.Parameters.AddWithValue("@NomeEstudio", estudioAtualizado.NomeEstudio);
+                    cmd.Parameters.AddWithValue("@Titulo", tipoUsuarioAtualizado.Titulo);
 
                     con.Open();
 
@@ -31,11 +32,11 @@ namespace Senai.Inlock.WebApi.Repositories
             }
         }
 
-        public EstudioDomain BuscarPorId(int id)
+        public TipoUsuarioDomain BuscarPorId(int id)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectById = "SELECT IdEstudio, NomeEstudio FROM Estudios WHERE IdEstudio = @ID";
+                string querySelectById = "SELECT IdTipoUsuario, Titulo FROM TipoUsuario WHERE IdTipoUsuario = @ID";
 
                 con.Open();
 
@@ -49,28 +50,28 @@ namespace Senai.Inlock.WebApi.Repositories
 
                     if (rdr.Read())
                     {
-                        EstudioDomain estudio = new EstudioDomain()
+                        TipoUsuarioDomain tipoUsuario = new TipoUsuarioDomain
                         {
-                            IdEstudio = Convert.ToInt32(rdr["IdEstudio"]),
+                            IdTipoUsuario = Convert.ToInt32(rdr["IdTipoUsuario"]),
 
-                            NomeEstudio = rdr["NomeEstudio"].ToString()
+                            Titulo = rdr["Titulo"].ToString()
                         };
-                        return estudio;
+                        return tipoUsuario;
                     }
                     return null;
                 }
             }
         }
 
-        public void Cadastrar(EstudioDomain novoEstudio)
+        public void Cadastrar(TipoUsuarioDomain novoTipoUsuario)
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryInsert = "INSERT INTO Estudios(NomeEstudio) VALUES (@NomeEstudio)";
+                string queryInsert = "INSERT INTO TipoUsuario(Titulo) VALUES(@Titulo)";
 
                 using (SqlCommand cmd = new SqlCommand(queryInsert, con))
                 {
-                    cmd.Parameters.AddWithValue("@NomeEstudio", novoEstudio.NomeEstudio);
+                    cmd.Parameters.AddWithValue("@Titulo", novoTipoUsuario.Titulo);
 
                     con.Open();
 
@@ -83,7 +84,7 @@ namespace Senai.Inlock.WebApi.Repositories
         {
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string queryDelete = "DELETE FROM Estudios WHERE IdEstudio = @ID";
+                string queryDelete = "DELETE FROM TipoUsuario WHERE IdTipoUsuario = @ID";
 
                 using (SqlCommand cmd = new SqlCommand(queryDelete, con))
                 {
@@ -96,13 +97,13 @@ namespace Senai.Inlock.WebApi.Repositories
             }
         }
 
-        public List<EstudioDomain> Listar()
+        public List<TipoUsuarioDomain> Listar()
         {
-            List<EstudioDomain> estudios = new List<EstudioDomain>();
+            List<TipoUsuarioDomain> tiposUsuario = new List<TipoUsuarioDomain>();
 
             using (SqlConnection con = new SqlConnection(stringConexao))
             {
-                string querySelectAll = "SELECT IdEstudio, NomeEstudio FROM Estudios";
+                string querySelectAll = "SELECT IdTipoUsuario, Titulo FROM TipoUsuario";
 
                 con.Open();
 
@@ -114,18 +115,18 @@ namespace Senai.Inlock.WebApi.Repositories
 
                     while (rdr.Read())
                     {
-                        EstudioDomain estudio = new EstudioDomain
+                        TipoUsuarioDomain tipoUsuario = new TipoUsuarioDomain
                         {
-                            IdEstudio = Convert.ToInt32(rdr["IdEstudio"]),
+                            IdTipoUsuario = Convert.ToInt32(rdr["IdTipoUsuario"]),
 
-                            NomeEstudio = rdr["NomeEstudio"].ToString()
+                            Titulo = rdr["Titulo"].ToString()
                         };
-                        estudios.Add(estudio);
+                        tiposUsuario.Add(tipoUsuario);
                     }
                 }
             }
 
-            return estudios;
+            return tiposUsuario;
         }
     }
 }

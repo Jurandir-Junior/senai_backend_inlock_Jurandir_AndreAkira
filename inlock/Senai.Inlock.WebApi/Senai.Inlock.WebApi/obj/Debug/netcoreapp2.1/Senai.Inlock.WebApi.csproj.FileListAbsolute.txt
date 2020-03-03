@@ -12,3 +12,33 @@ C:\Users\51855643855\Documents\SQL Server Management Studio\SQL\inlock\Senai.Inl
 C:\Users\51855643855\Documents\SQL Server Management Studio\SQL\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.pdb
 C:\Users\51855643855\Documents\SQL Server Management Studio\SQL\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.dll
 C:\Users\51855643855\Documents\SQL Server Management Studio\SQL\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.pdb
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\appsettings.Development.json
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Properties\launchSettings.json
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.deps.json
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.runtimeconfig.json
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.runtimeconfig.dev.json
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.dll
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.pdb
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.csprojAssemblyReference.cache
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.RazorAssemblyInfo.cache
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.RazorAssemblyInfo.cs
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.AssemblyInfoInputs.cache
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.AssemblyInfo.cs
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.dll
+C:\Users\Jurandir\Desktop\senai_backend_inlock_Jurandir_AndreAkira\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.pdb
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.deps.json
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.runtimeconfig.json
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.runtimeconfig.dev.json
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.dll
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\bin\Debug\netcoreapp2.1\Senai.Inlock.WebApi.pdb
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.csprojAssemblyReference.cache
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.csproj.CoreCompileInputs.cache
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.RazorAssemblyInfo.cache
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.RazorAssemblyInfo.cs
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.AssemblyInfoInputs.cache
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.AssemblyInfo.cs
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.RazorTargetAssemblyInfo.cache
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.dll
+C:\Users\51855643855\Documents\SQL Server Management Studio\Inlock_Change\inlock\Senai.Inlock.WebApi\Senai.Inlock.WebApi\obj\Debug\netcoreapp2.1\Senai.Inlock.WebApi.pdb
